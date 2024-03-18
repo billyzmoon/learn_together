@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Together</title>
+	<link rel="shortcut icon" href="app.png">
+    <style>
+        /* Общие стили */
+        body {
+            background-color: #FBFBFE;
+            color: #050315;
+            font-family: 'Ubuntu Mono', monospace;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #2F27CE; /* Возвращаем цвет шапки */
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            text-align: center;
+            width: 99%;
+        }
+        .button {
+            background-color: transparent; /* Убран фон кнопок */
+            border: none;
+            color: #FBFBFE; /* Возвращаем цвет текста кнопок в шапке */
+			font-family: 'Ubuntu Mono', monospace;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 28px; /* Увеличен размер текста */
+            cursor: pointer;
+            border-radius: 50px; /* Увеличен радиус границы кнопок */
+            flex-grow: 1;
+            outline: none;
+            font-weight: bold; /* Делаем текст кнопок полужирным */
+            transition: background-color 0.3s; /* Плавный переход цвета */
+        }
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Добавляем светлеющий эффект при наведении */
+        }
+        .footer {
+            background-color: #2F27CE;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .content {
+            padding: 20px;
+            max-width: 800px; /* Ограничение ширины текста для удобного чтения на всех устройствах */
+            margin: 0 auto; /* Центрирование текста */
+            font-size: 24px; /* Увеличен размер текста */
+        }
+        .home-button {
+            background-color: #2F27CE; /* Возвращаем цвет кнопки домика */
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            outline: none;
+            font-size: 24px; /* Увеличен размер текста */
+        }
+        @media only screen and (max-width: 600px) {
+            /* Стили для маленьких экранов */
+            .content {
+                padding: 10px; /* Уменьшение отступов */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button class="home-button" onclick="showContent('mainContent')"><img src="home.png" alt="Главная" width="48" height="48"></button> <!-- Обновленная минималистичная иконка домика -->
+        <button class="button" onclick="showContent('bachelorContent')">Bachelor</button>
+        <button class="button" onclick="showContent('masterContent')">Master</button>
+        <button class="button" onclick="showContent('teacherContent')">Teacher</button>
+    </div>
+
+    <!-- Содержимое на основной странице -->
+    <div id="mainContent" class="content">
+        <p>Содержимое на главной странице</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet libero vitae neque lobortis aliquet vitae vitae urna. Proin at libero condimentum, euismod risus eu, tempor neque. Sed enim libero, porta ut consectetur a, sagittis in est. Vivamus tincidunt odio eget urna eleifend, nec interdum lectus laoreet. Maecenas fringilla sem enim, quis aliquet quam feugiat blandit. Donec eu augue arcu. Integer nec dui vitae diam scelerisque volutpat. Nunc efficitur sed sapien id sagittis. Sed fermentum enim sed libero imperdiet, in auctor ipsum volutpat. Mauris enim ipsum, elementum at eros id, consectetur aliquam sapien. Etiam mollis erat libero, sodales suscipit erat tincidunt id. Cras quis accumsan mi. Ut pharetra at orci ut volutpat. Nulla efficitur porttitor libero, nec porttitor velit efficitur dictum. Proin vel tempor justo.</p>
+		<p>Vivamus commodo tortor et velit vestibulum interdum. Nulla scelerisque ultricies mi, sit amet ultrices tellus molestie in. Nulla sagittis vel velit vitae finibus. Suspendisse massa est, consequat eget aliquam pulvinar, fringilla et nulla. Suspendisse luctus odio massa, ac commodo est faucibus sed. Fusce at magna sagittis, dictum sem sit amet, lobortis eros. Phasellus quis ornare nisl, et dapibus neque. Fusce nec dictum eros, in vulputate elit. Vestibulum euismod cursus enim, at lacinia elit auctor consectetur. Sed rutrum condimentum egestas. Curabitur luctus, odio at tincidunt consequat, ligula est iaculis nisi, in tempor augue metus non risus. Nam blandit, dolor et laoreet tincidunt, massa nibh sodales metus, et facilisis neque elit vel orci. Donec id turpis consequat, sodales magna in, mollis lorem. Etiam suscipit enim orci, eu volutpat quam ullamcorper vel. Proin et libero posuere nisl efficitur elementum in sit amet turpis. Donec ante justo, tristique sed tristique in, viverra et lacus.</p>
+	</div>
+
+    <!-- Содержимое для раздела Bachelor -->
+    <div id="bachelorContent" class="content" style="display: none;">
+        <p>Содержимое для раздела Bachelor</p>
+		<p>Suspendisse et porta mi. Proin eget vehicula justo. Ut condimentum urna libero, eu vehicula justo euismod sed. Donec tristique felis arcu. Quisque in sapien bibendum, maximus nulla non, condimentum nulla. Integer tristique, nisi non ultricies vestibulum, erat nisl mattis lacus, id efficitur urna lorem vitae nunc. Cras efficitur vel ex sit amet ultrices. Maecenas vel tristique ante. Proin hendrerit, nisi sed consequat suscipit, ex sapien condimentum lacus, non egestas tortor tortor vitae erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse placerat lacus id metus sagittis lobortis. Phasellus et ullamcorper libero. Donec nisi odio, posuere ac vulputate eget, finibus semper nisl.</p>
+		<p>Integer in purus vel orci hendrerit pellentesque non sit amet elit. Quisque sed arcu vel risus accumsan ornare. Aliquam et accumsan felis, non suscipit lorem. Aliquam ultrices vehicula ligula, euismod vulputate turpis. Quisque eu nibh pellentesque, consectetur ex quis, aliquet libero. Curabitur vel tellus odio. Quisque vulputate finibus neque a tincidunt. Nunc mattis semper ex non lobortis. Donec suscipit eget magna non vehicula. Aliquam erat volutpat. Sed eu sodales turpis.</p>
+	</div>
+	
+	<!-- Содержимое для раздела Master -->
+    <div id="masterContent" class="content" style="display: none;">
+        <p>Содержимое для раздела Master</p>
+		<p>Nullam rhoncus auctor sem eu consectetur. Integer ac egestas lacus. Proin ut elit magna. Donec mattis sapien vel mauris efficitur, posuere viverra dolor cursus. Morbi vitae leo nibh. Aenean vitae convallis urna, in tristique dui. Vestibulum mauris risus, mattis sit amet rhoncus sed, posuere vel eros.</p>
+		<p>Vestibulum mollis neque id lacus gravida, vel vestibulum est tempus. In gravida elit eget mauris feugiat, at aliquam tortor elementum. Proin pulvinar erat dolor, at pharetra metus egestas a. Pellentesque accumsan sagittis lorem id molestie. Sed id volutpat ipsum. Integer a posuere massa, nec scelerisque purus. Fusce ut tincidunt lorem. In a turpis ante. Curabitur dignissim, nisi commodo vestibulum tempor, arcu nisl auctor elit, in convallis erat elit ut sem. Pellentesque sed vehicula urna. Sed eu scelerisque nisl. Nulla fringilla et risus sit amet lacinia. Nulla facilisi. Nullam tincidunt interdum nisl quis molestie. In hac habitasse platea dictumst.</p>
+    </div>
+	
+	<!-- Содержимое для раздела Teacher -->
+    <div id="teacherContent" class="content" style="display: none;">
+        <p>Содержимое для раздела Teacher</p>
+		<p>Donec ac maximus ex. Integer laoreet eros id ligula mollis aliquam. Praesent a ex est. Mauris eu urna id massa egestas dapibus. Aliquam erat volutpat. Aliquam dictum odio ac massa fermentum sagittis. In hac habitasse platea dictumst. Cras arcu urna, consequat eu condimentum id, pharetra ac mauris. Quisque elementum porttitor risus, at pulvinar sapien malesuada vel. Curabitur porta vel dui non pulvinar. Etiam quis lorem facilisis, semper sem id, lobortis lacus. Integer laoreet fermentum gravida. Aliquam et nisl erat.</p>
+		<p>Duis at nulla sed ipsum aliquam accumsan eget a elit. Nullam placerat semper dolor, sed molestie neque hendrerit et. Donec a luctus massa, quis venenatis arcu. Sed pharetra vulputate diam non tempus. Cras cursus odio erat, ac hendrerit sem imperdiet sit amet. Curabitur porttitor sit amet diam nec rhoncus. Aliquam ultrices velit in hendrerit dignissim. Sed ut justo vitae sem ullamcorper semper.</p>
+    </div>
+
+    <div class="footer">
+        <p>© Авторское право принадлежит Andrusenko A., Salnikova P.</p>
+    </div>
+    
+    <script>
+        function showContent(id) {
+            var contentDivs = document.getElementsByClassName("content");
+            for (var i = 0; i < contentDivs.length; i++) {
+                if (contentDivs[i].id === id) {
+                    contentDivs[i].style.display = 'block';
+                } else {
+                    contentDivs[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
