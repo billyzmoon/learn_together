@@ -67,16 +67,22 @@
             font-size: 24px;
         }
         @media only screen and (max-width: 600px) {
-            /* Стили для маленьких экранов */
             .content {
-                padding: 10px; /* Уменьшение отступов */
+                padding: 10px;
+				font-size: 18px;
+            }
+			.button {
+                font-size: 20px;
+            }
+            .home-button {
+                font-size: 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <button class="home-button" onclick="showContent('mainContent')"><img src="home.png" alt="Главная" width="48" height="48"></button> <!-- Обновленная минималистичная иконка домика -->
+        <button class="home-button" onclick="showContent('mainContent')"><img src="home.png" alt="Главная" width="48" height="48"></button>
         <button class="button" onclick="showContent('bachelorContent')">Bachelors</button>
         <button class="button" onclick="showContent('masterContent')">Masters</button>
         <button class="button" onclick="showContent('teacherContent')">Teachers</button>
@@ -106,6 +112,12 @@
 	<!-- Содержимое для раздела Teachers -->
     <div id="teacherContent" class="content" style="display: none;">
         <p>Содержимое для раздела Teachers</p>
+		<iframe width="800" height="440"
+			src="https://www.youtube.com/embed/vKrf_h8cvAM?si=iMHmYY6d-nT7j4Iy"
+			title="YouTube video player" frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+			allowfullscreen>
+		</iframe>
 		<p>Donec ac maximus ex. Integer laoreet eros id ligula mollis aliquam. Praesent a ex est. Mauris eu urna id massa egestas dapibus. Aliquam erat volutpat. Aliquam dictum odio ac massa fermentum sagittis. In hac habitasse platea dictumst. Cras arcu urna, consequat eu condimentum id, pharetra ac mauris. Quisque elementum porttitor risus, at pulvinar sapien malesuada vel. Curabitur porta vel dui non pulvinar. Etiam quis lorem facilisis, semper sem id, lobortis lacus. Integer laoreet fermentum gravida. Aliquam et nisl erat.</p>
 		<p>Duis at nulla sed ipsum aliquam accumsan eget a elit. Nullam placerat semper dolor, sed molestie neque hendrerit et. Donec a luctus massa, quis venenatis arcu. Sed pharetra vulputate diam non tempus. Cras cursus odio erat, ac hendrerit sem imperdiet sit amet. Curabitur porttitor sit amet diam nec rhoncus. Aliquam ultrices velit in hendrerit dignissim. Sed ut justo vitae sem ullamcorper semper.</p>
     </div>
